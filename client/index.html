@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-bg-primary text-text-primary">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discipline Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="antialiased min-h-screen relative selection:bg-accent-cyan/30">
+    <!-- Animated Glass Neon Background -->
+    <div class="fixed inset-0 overflow-hidden -z-10 pointer-events-none">
+      <div class="absolute top-0 -left-10 w-[500px] h-[500px] bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[120px] opacity-70 animate-blob"></div>
+      <div class="absolute top-0 -right-10 w-[500px] h-[500px] bg-accent-cyan/20 rounded-full mix-blend-screen filter blur-[120px] opacity-70 animate-blob" style="animation-delay: 2s;"></div>
+      <div class="absolute -bottom-20 left-40 w-[500px] h-[500px] bg-accent-pink/20 rounded-full mix-blend-screen filter blur-[120px] opacity-70 animate-blob" style="animation-delay: 4s;"></div>
+    </div>
+    
+    <div id="root" class="relative z-0 h-full flex flex-col"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

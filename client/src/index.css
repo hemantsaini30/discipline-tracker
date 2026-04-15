@@ -12,6 +12,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Push content below mobile top bar */
+@media (max-width: 768px) {
+  main {
+    padding-top: 3.5rem; /* same as navbar height */
+  }
+}
+
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #2a2a32; border-radius: 2px; }
@@ -32,8 +39,12 @@ body {
   transition: background 0.15s;
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-primary:hover { background: #2563eb; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .btn-ghost {
   background: transparent;
@@ -60,7 +71,7 @@ input, select, textarea {
   transition: border 0.15s;
 }
 input:focus, select:focus, textarea:focus { border-color: #3b82f6; }
-input::placeholder { color: #55556a; }
+input::placeholder, textarea::placeholder { color: #55556a; }
 
 .status-dot {
   width: 7px; height: 7px; border-radius: 50%; display: inline-block;
